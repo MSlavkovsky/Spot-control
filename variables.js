@@ -2,7 +2,7 @@
 
 /* vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv UPDATE EVERY TIME CHROME IS OPENED vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv */
 const webSocketDebuggerUrl = {
-  "webSocketDebuggerUrl": "ws://127.0.0.1:9222/devtools/browser/0ef551ad-f02d-46b3-9957-998f4af12cee"
+  "webSocketDebuggerUrl": "ws://127.0.0.1:9222/devtools/browser/a04bd6ab-cd6b-43ce-9441-7b92a5f27873"
 };
 /* vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv UPDATE EVERY TIME CHROME IS OPENED vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv */
 
