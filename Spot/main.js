@@ -5,12 +5,12 @@ const ConfluencePage = require('./confluencePage.js');
 const Navigation = require('./navigation.js');
 
 class Spot {
-  constructor(page, envInstances) {
-    this.execute(page, envInstances)
+  constructor(page, envInstances, inputValue) {
+    this.execute(page, envInstances, inputValue)
     this.test = 1
   }
 
-  async execute(page, envInstances) {
+  async execute(page, envInstances, inputValue) {
     const confluencePage = new ConfluencePage()
 
     for (const instance of variables1.instances) {
