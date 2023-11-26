@@ -1,0 +1,79 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.sitesDiv {
+    margin: 10px;
+    padding: 10px;
+    height: 500px;
+    border-radius: 10px;
+}
+
+#progress-container-SPOT {
+    background-color: rgb(211, 243, 253);
+    transition: 0.3s;
+}
+
+#progress-container-SPOT:hover {
+    background-color: rgb(118, 205, 235);
+    transition: 0.3s;
+}
+
+#progress-container-SPOT:hover #SPOT-btn {
+    background-color: rgb(118, 205, 235);
+    border-color: white;
+    color: black;
+    transition: 0.3s;
+}
+
+#progress-container-SPOT:hover #inputValue {
+    background-color: rgb(211, 243, 253);
+    border-style: solid;
+    border-color: white;
+    transition: 0.3s;
+}
+
+button {
+    background-color: white;
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 2px;
+    padding: 5px;
+    font-weight: 700;
+}
+
+#SPOT-btn {
+    background-color: rgb(211, 243, 253);
+    transition: 0.3s
+}
+
+#SPOT-btn:hover {
+    background-color: rgb(88, 180, 255) !important;
+    color: white !important;
+    transition: 0.3s
+}
+
+.instanceInput {
+    border-radius: 5px;
+    padding: 5px;
+}
+
+#inputValue {
+    border-style: solid;
+    transition: 0.3s;
+}
+
+
+#progress-container-AWS {
+    background-color: rgb(255, 234, 195);
+    transition: background-color 0.3s;
+}
+
+#progress-container-AWS:hover {
+    background-color: rgb(255, 199, 96);
+    transition: background-color 0.3s;
+}

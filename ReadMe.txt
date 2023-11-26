@@ -2,6 +2,7 @@
     1. navigate to SPOT-CONTROL folder
     2. run: npm init -y
     3. run: npm install express puppeteer
+    4. run: npm installs ws
 
 * To run app you must run Chrome instance with with listener:
     1. run cmd and navigate to Chrome.exe folder (Ussualyly: C:\Program Files\Google\Chrome\Application)
