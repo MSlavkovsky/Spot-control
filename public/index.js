@@ -1,22 +1,34 @@
-document.getElementById('runPuppeteer').addEventListener('click', async () => {
-    var inputValue = document.getElementById('textInput').value;
-
-    alert(inputValue);
-
-    var object = [
+async function runPuppeteer() {
+    const inputURL = document.getElementById('inputValue').value;
+    var instances = [
         {
-            "el1": "A"
+          "el1": "A"
         },
         {
-            "el2": "B"
+          "el2": "B"
         }
-    ];
-
+      ];
     try {
-        const response = await fetch(`/run-puppeteer?inputValue=${encodeURIComponent(JSON.stringify(object))}`);
-      //  const result = await response.text();
-      //  console.log('Puppeteer result:', result);
+      // Initiate Puppeteer execution on the server
+      await fetch(`/runPuppeteer?instances=${encodeURIComponent(JSON.stringify(instances))}&inputURL=${encodeURIComponent(inputURL)}`);
     } catch (error) {
-        console.error('Error running Puppeteer:', error);
+      console.error('Error initiating Puppeteer execution:', error);
+      alert('Error initiating Puppeteer execution. Check the console for details.');
     }
-});
+
+    const ws = new WebSocket(`ws://localhost:3000`);
+
+    ws.onmessage = (event) => {
+      const data = JSON.parse(event.data);
+      updateProgress(data.progress);
+
+      // If the progress message indicates completion, close the WebSocket connection
+      if (data.progress.includes('completed successfully')) {
+        ws.close();
+      }
+    };
+  }
+
+  function updateProgress(progress) {
+    document.getElementById('progress-Spot').innerText += `${progress}\n`;
+  }
